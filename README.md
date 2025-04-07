@@ -1,66 +1,115 @@
-# 🐇 Projeto Exemplo com RabbitMQ - Publisher & Consumer
 
-Este é um projeto simples que demonstra o uso do **RabbitMQ** com **Python** utilizando a biblioteca `pika`.  
-Ele possui dois arquivos principais:
+# 🐇 Projeto RabbitMQ - Publisher & Consumer em Python
 
-- `publisher.py`: responsável por publicar mensagens.
-- `consumer.py`: responsável por consumir mensagens de uma fila.
+Este é um projeto simples que demonstra o uso do RabbitMQ com Python utilizando a biblioteca `pika`.
 
 
-## 🧱 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
-.
-├── consumer.py
-├── publisher.py
-└── README.md
-```
-
-
-## 📦 Requisitos
-
-- Python 3.8+
-- RabbitMQ rodando localmente (porta padrão `5672`)
-- Instalar dependências com:
-
-```bash
-pip install pika
+rabbitmq_example/
+├── app/
+│   ├── __init__.py
+│   ├── consumer.py
+│   ├── publisher.py
+│   └── config.py
+├── main_consumer.py
+├── main_publisher.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 
 ## 🚀 Como Usar
 
-### 1. Inicie o RabbitMQ
-
-Certifique-se de que o RabbitMQ está rodando localmente.
-
-### 2. Execute o Consumer
-
-Este script ficará escutando a fila chamada `data_queue`:
+### 1. Instale as dependências
 
 ```bash
-python consumer.py
+pip install -r requirements.txt
+# 🐇 Projeto RabbitMQ - Publisher & Consumer em Python
+
+Este é um projeto simples que demonstra o uso do RabbitMQ com Python utilizando a biblioteca `pika`.
+
+
+## 📁 Estrutura do Projeto
+
+```
+rabbitmq_example/
+├── app/
+│   ├── __init__.py
+│   ├── consumer.py
+│   ├── publisher.py
+│   └── config.py
+├── main_consumer.py
+├── main_publisher.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
-### 3. Execute o Publisher
 
-Este script enviará uma mensagem `{'Hello': 'World!'}` para o RabbitMQ:
+## 🚀 Como Usar
+
+### 1. Instale as dependências
 
 ```bash
-python publisher.py
+pip install -r requirements.txt
 ```
 
-Você verá a mensagem sendo exibida no terminal do consumidor.
+### 2. Inicie o RabbitMQ
+
+Certifique-se de que o RabbitMQ está rodando localmente na porta 5672.
+
+### 3. Execute o consumer
+
+```bash
+python main_consumer.py
+```
+
+### 4. Execute o publisher
+
+```bash
+python main_publisher.py
+```
 
 
-## 🧠 Observações Técnicas
+## 🔧 Tecnologias Usadas
 
-- O `consumer.py` consome mensagens da fila `data_queue`.
-- O `publisher.py` publica mensagens no exchange `data_exchange` com routing key vazio (`''`).
-- Ambos usam credenciais padrão (`guest`/`guest`) e se conectam ao host `localhost`.
+- Python 3.8+
+- RabbitMQ
+- Pika (cliente RabbitMQ para Python)
 
 
 ## 📄 Licença
 
-Este projeto é apenas para fins de aprendizado e demonstração.
+Este projeto é apenas para fins de aprendizado.
+```
 
+### 2. Inicie o RabbitMQ
+
+Certifique-se de que o RabbitMQ está rodando localmente na porta 5672.
+
+### 3. Execute o consumer
+
+```bash
+python main_consumer.py
+```
+
+### 4. Execute o publisher
+
+```bash
+python main_publisher.py
+```
+
+
+## 🔧 Tecnologias Usadas
+
+- Python 3.8+
+- RabbitMQ
+- Pika (cliente RabbitMQ para Python)
+
+
+## 📄 Licença
+
+Este projeto é apenas para fins de aprendizado.
