@@ -11,8 +11,8 @@ rabbitmq_example/
 │   ├── consumer.py
 │   ├── publisher.py
 │   └── config.py
-├── main_consumer.py
-├── main_publisher.py
+├── consumer_raw.py
+├── publisher_raw.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
