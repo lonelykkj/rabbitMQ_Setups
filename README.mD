@@ -33,13 +33,13 @@ Certifique-se de que o RabbitMQ está rodando localmente na porta 5672.
 ### 3. Execute o consumer
 
 ```bash
-python main_consumer.py
+python consumer.py
 ```
 
 ### 4. Execute o publisher
 
 ```bash
-python main_publisher.py
+python publisher.py
 ```
 
 ## 🔧 Tecnologias Usadas
